@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dipthamshu Thakur | Cloud Engineer</title>
+</head>
+<body>
+
+<h1>Dipthamshu Thakur</h1>
+<p>Aspiring Cloud Engineer</p>
+
+<hr>
+
+<h2>About Me</h2>
+<p>I am learning AWS and building real-world cloud projects.</p>
+
+<h2>Skills</h2>
+<ul>
+<li>AWS S3</li>
+<li>AWS Lambda</li>
+<li>API Gateway</li>
+<li>DynamoDB</li>
+<li>IAM</li>
+<li>CloudWatch</li>
+</ul>
+
+<h2>Projects</h2>
+
+<h3>Serverless Resume Website</h3>
+<p>
+Built a serverless resume website using AWS S3, Lambda, API Gateway, and DynamoDB.
+Implemented visitor tracking with proper IAM roles and CORS configuration.
+</p>
+
+<h2>Visitor Count</h2>
+<p id="count">Loading...</p>
+
+<script>
+fetch("https://85wdg4p74b.execute-api.eu-north-1.amazonaws.com/prod/count")
+.then(response => response.json())
+.then(data => {
+    document.getElementById("count").innerText = data;
+});
+</script>
+
+</body>
+</html>
